@@ -1,13 +1,15 @@
-package io.github.mat3e;
+package io.github.mat3e.lang;
+
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "languages")
-class Lang {
+@Entity //reprezentacja tabeli jako klasa
+@Table(name = "languages") //definiujemy nazwe tabeli
+public class Lang { //DTO
     //strategia generowania Id
     @Id
     @GeneratedValue(generator = "inc")
@@ -20,7 +22,7 @@ class Lang {
     /**
      * Hibernate (JPA) needs it.
      */
-    @SuppressWarnings("unused")
+   @SuppressWarnings("unused")
     Lang() {
     }
 
